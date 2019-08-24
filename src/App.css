@@ -28,8 +28,18 @@
   margin-bottom: 0rem;
 }
 
+.title-info {
+  display: flex;
+  justify-content: flex-end;
+  width: 65%;
+}
+
+.completed-counter {
+}
+
 .button {
   background: transparent;
+  cursor: pointer;
   border: none;
   transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
@@ -78,6 +88,7 @@ ul {
 .task-name.completed {
   text-decoration: line-through;
   transition: all 0.25s cubic-bezier(0, 1.05, 0.72, 1.07);
+  color: #757575;
 }
 
 .check {

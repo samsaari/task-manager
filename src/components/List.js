@@ -3,12 +3,19 @@ import ListItem from './ListItem';
 import AddItem from './AddItem';
 
 const List = (props) => {
+    const completed = () => {
+        const completedTasks = props.tasks.filter((task) => task.completed === true);
+        return completedTasks.length;
+    }
     return (
         <div>
             <div className="header">
                 <div className="container title">
                     <h3>Your tasks</h3>
-                    <button className={`button button__completed button--${props.showCompleted ? 'hide' : 'show'}`} onClick={props.handleShowCompleted}>{props.showCompleted ? 'Hide' : 'Show'} completed</button>
+                    <div className="title-info">
+                        <span className="completed-counter">{completed()} Completed</span>
+                        <button className={`button button__completed button--${props.showCompleted ? 'hide' : 'show'}`} onClick={props.handleShowCompleted}>{props.showCompleted ? 'Hide' : 'Show'} completed</button>
+                    </div>
                 </div>
             </div>
             <div className="container">
