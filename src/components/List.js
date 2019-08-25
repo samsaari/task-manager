@@ -15,6 +15,7 @@ const List = (props) => {
                     <div className="title-info">
                         <span className="completed-counter">{completed()} Completed</span>
                         <button className={`button button__completed button--${props.showCompleted ? 'hide' : 'show'}`} onClick={props.handleShowCompleted}>{props.showCompleted ? 'Hide' : 'Show'} completed</button>
+                        <button className="button button__clear" onClick={props.handleEmptyList}>Clear all</button>
                     </div>
                 </div>
             </div>

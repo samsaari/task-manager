@@ -36,6 +36,13 @@ export class TaskManager extends Component {
         }));
     }
 
+    handleEmptyList = (e) => {
+        e.preventDefault();
+        this.setState({
+            tasks: []
+        });
+    } 
+
     handleCompleteTask = (taskToComplete) => {
         const tasks = this.state.tasks;
         // Find index of taskToComplete
@@ -65,6 +72,7 @@ export class TaskManager extends Component {
                     handleDeleteTask={this.handleDeleteTask}
                     handleCompleteTask={this.handleCompleteTask}
                     handleShowCompleted={this.handleShowCompleted}
+                    handleEmptyList={this.handleEmptyList}
                 />
             </div>
         )
